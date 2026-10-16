@@ -1,0 +1,17 @@
+activity,event_count
+Leucocytes,3374
+CRP,3257
+LacticAcid,1464
+Admission NC,1180
+ER Triage,1052
+ER Registration,1049
+ER Sepsis Triage,1048
+IV Antibiotics,822
+IV Liquid,752
+Release A,671
+Return ER,294
+Admission IC,117
+Release B,56
+Release C,24
+Release D,24
+Release E,6
