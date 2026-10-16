@@ -69,3 +69,14 @@ SELECT
 FROM cleaned_event_logs
 GROUP BY case_id
 ORDER BY total_events DESC;
+
+-- 9. Case activity diversity
+-- Count distinct activities performed in each case
+
+SELECT
+    case_id,
+    COUNT(*) AS total_events,
+    COUNT(DISTINCT activity) AS unique_activities
+FROM cleaned_event_logs
+GROUP BY case_id
+ORDER BY unique_activities DESC, total_events DESC;
