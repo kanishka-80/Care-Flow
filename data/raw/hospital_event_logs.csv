@@ -1,0 +1,605 @@
+case_id,activity,timestamp,department,doctor_id,outcome
+CASE001,Registration,2026-10-01 13:01:00,Emergency,DOC003,Discharged
+CASE001,Triage,2026-10-01 13:12:00,Orthopaedics,DOC009,Discharged
+CASE001,Doctor Consultation,2026-10-01 13:22:00,Orthopaedics,DOC007,Discharged
+CASE001,Laboratory Test,2026-10-01 13:29:00,Emergency,DOC002,Discharged
+CASE001,X-Ray,2026-10-01 13:47:00,Emergency,DOC009,Discharged
+CASE001,Pharmacy,2026-10-01 14:30:00,Emergency,DOC009,Discharged
+CASE001,Discharge,2026-10-01 14:47:00,Orthopaedics,DOC009,Discharged
+CASE002,Registration,2026-10-01 12:49:00,Emergency,DOC007,Discharged
+CASE002,Triage,2026-10-01 13:15:00,General Medicine,DOC003,Discharged
+CASE002,Doctor Consultation,2026-10-01 13:33:00,General Medicine,DOC002,Discharged
+CASE002,Laboratory Test,2026-10-01 13:43:00,General Medicine,DOC002,Discharged
+CASE002,Pharmacy,2026-10-01 14:10:00,General Medicine,DOC010,Discharged
+CASE002,Discharge,2026-10-01 14:31:00,Emergency,DOC008,Discharged
+CASE003,Registration,2026-10-01 14:37:00,Orthopaedics,DOC005,Discharged
+CASE003,Triage,2026-10-01 15:22:00,Orthopaedics,DOC006,Discharged
+CASE003,Doctor Consultation,2026-10-01 16:03:00,Emergency,DOC002,Discharged
+CASE003,Laboratory Test,2026-10-01 16:10:00,Orthopaedics,DOC004,Discharged
+CASE003,Pharmacy,2026-10-01 16:33:00,Emergency,DOC004,Discharged
+CASE003,Discharge,2026-10-01 16:44:00,General Medicine,DOC005,Discharged
+CASE004,Registration,2026-10-01 11:14:00,General Medicine,DOC004,Discharged
+CASE004,Triage,2026-10-01 11:36:00,Orthopaedics,DOC002,Discharged
+CASE004,Doctor Consultation,2026-10-01 12:19:00,Orthopaedics,DOC003,Discharged
+CASE004,Laboratory Test,2026-10-01 12:58:00,Orthopaedics,DOC004,Discharged
+CASE004,Pharmacy,2026-10-01 13:13:00,General Medicine,DOC007,Discharged
+CASE004,Discharge,2026-10-01 13:35:00,Orthopaedics,DOC009,Discharged
+CASE005,Registration,2026-10-01 09:16:00,Emergency,DOC006,Discharged
+CASE005,Triage,2026-10-01 09:46:00,General Medicine,DOC002,Discharged
+CASE005,Doctor Consultation,2026-10-01 10:04:00,Orthopaedics,DOC006,Discharged
+CASE005,Laboratory Test,2026-10-01 10:22:00,Orthopaedics,DOC008,Discharged
+CASE005,Pharmacy,2026-10-01 10:52:00,Orthopaedics,DOC008,Discharged
+CASE005,Discharge,2026-10-01 11:06:00,General Medicine,DOC003,Discharged
+CASE006,Registration,2026-10-01 13:11:00,General Medicine,DOC010,Discharged
+CASE006,Triage,2026-10-01 13:41:00,General Medicine,DOC004,Discharged
+CASE006,Doctor Consultation,2026-10-01 13:54:00,Orthopaedics,DOC008,Discharged
+CASE006,Laboratory Test,2026-10-01 14:04:00,Emergency,DOC002,Discharged
+CASE006,Pharmacy,2026-10-01 14:18:00,Orthopaedics,DOC003,Discharged
+CASE006,Discharge,2026-10-01 14:50:00,Orthopaedics,DOC002,Discharged
+CASE007,Registration,2026-10-01 16:37:00,General Medicine,DOC009,Discharged
+CASE007,Triage,2026-10-01 16:42:00,Orthopaedics,DOC002,Discharged
+CASE007,Doctor Consultation,2026-10-01 17:21:00,General Medicine,DOC006,Discharged
+CASE007,Laboratory Test,2026-10-01 17:33:00,General Medicine,DOC007,Discharged
+CASE007,Pharmacy,2026-10-01 17:48:00,General Medicine,DOC001,Discharged
+CASE007,Discharge,2026-10-01 18:09:00,Orthopaedics,DOC003,Discharged
+CASE008,Registration,2026-10-01 13:50:00,Orthopaedics,DOC010,Discharged
+CASE008,Triage,2026-10-01 14:07:00,Emergency,DOC006,Discharged
+CASE008,Doctor Consultation,2026-10-01 14:22:00,Orthopaedics,DOC009,Discharged
+CASE008,Laboratory Test,2026-10-01 14:27:00,Orthopaedics,DOC006,Discharged
+CASE008,X-Ray,2026-10-01 15:03:00,Emergency,DOC002,Discharged
+CASE008,Pharmacy,2026-10-01 15:31:00,General Medicine,DOC004,Discharged
+CASE008,Discharge,2026-10-01 15:39:00,Emergency,DOC010,Discharged
+CASE009,Registration,2026-10-01 16:26:00,Orthopaedics,DOC003,Discharged
+CASE009,Triage,2026-10-01 16:39:00,Orthopaedics,DOC008,Discharged
+CASE009,Doctor Consultation,2026-10-01 17:19:00,Emergency,DOC005,Discharged
+CASE009,X-Ray,2026-10-01 17:57:00,Orthopaedics,DOC007,Discharged
+CASE009,Pharmacy,2026-10-01 18:15:00,Orthopaedics,DOC004,Discharged
+CASE009,Discharge,2026-10-01 18:39:00,General Medicine,DOC006,Discharged
+CASE010,Registration,2026-10-01 10:23:00,Emergency,DOC002,Discharged
+CASE010,Triage,2026-10-01 10:49:00,Emergency,DOC010,Discharged
+CASE010,Triage,2026-10-01 11:29:00,Emergency,DOC010,Discharged
+CASE010,Doctor Consultation,2026-10-01 11:48:00,Emergency,DOC002,Discharged
+CASE010,Laboratory Test,2026-10-01 12:33:00,Emergency,DOC004,Discharged
+CASE010,Pharmacy,2026-10-01 12:42:00,Emergency,DOC006,Discharged
+CASE010,Discharge,2026-10-01 12:51:00,Orthopaedics,DOC004,Discharged
+CASE011,Registration,2026-10-01 17:25:00,Orthopaedics,DOC010,Discharged
+CASE011,Triage,2026-10-01 18:06:00,General Medicine,DOC004,Discharged
+CASE011,Doctor Consultation,2026-10-01 18:41:00,General Medicine,DOC004,Discharged
+CASE011,Laboratory Test,2026-10-01 18:52:00,Emergency,DOC007,Discharged
+CASE011,Pharmacy,2026-10-01 19:19:00,General Medicine,DOC007,Discharged
+CASE011,Discharge,2026-10-01 19:53:00,Orthopaedics,DOC001,Discharged
+CASE012,Registration,2026-10-01 09:48:00,General Medicine,DOC006,Discharged
+CASE012,Triage,2026-10-01 09:59:00,Emergency,DOC004,Discharged
+CASE012,Doctor Consultation,2026-10-01 10:16:00,Orthopaedics,DOC008,Discharged
+CASE012,Pharmacy,2026-10-01 10:29:00,General Medicine,DOC003,Discharged
+CASE012,Discharge,2026-10-01 10:51:00,General Medicine,DOC004,Discharged
+CASE013,Registration,2026-10-01 17:34:00,Emergency,DOC009,Discharged
+CASE013,Triage,2026-10-01 17:39:00,Emergency,DOC004,Discharged
+CASE013,Doctor Consultation,2026-10-01 17:54:00,General Medicine,DOC008,Discharged
+CASE013,X-Ray,2026-10-01 18:29:00,Emergency,DOC007,Discharged
+CASE013,Pharmacy,2026-10-01 18:37:00,Emergency,DOC007,Discharged
+CASE013,Discharge,2026-10-01 18:42:00,General Medicine,DOC005,Discharged
+CASE014,Registration,2026-10-01 13:24:00,Orthopaedics,DOC009,Discharged
+CASE014,Triage,2026-10-01 14:00:00,Emergency,DOC004,Discharged
+CASE014,Doctor Consultation,2026-10-01 14:23:00,Emergency,DOC001,Discharged
+CASE014,Pharmacy,2026-10-01 15:05:00,Orthopaedics,DOC009,Discharged
+CASE014,Discharge,2026-10-01 15:13:00,Orthopaedics,DOC006,Discharged
+CASE015,Registration,2026-10-01 17:12:00,Emergency,DOC001,Discharged
+CASE015,Triage,2026-10-01 17:49:00,Emergency,DOC003,Discharged
+CASE015,Doctor Consultation,2026-10-01 17:58:00,Orthopaedics,DOC002,Discharged
+CASE015,Laboratory Test,2026-10-01 21:58:00,General Medicine,DOC002,Discharged
+CASE015,Pharmacy,2026-10-01 22:39:00,Emergency,DOC010,Discharged
+CASE015,Discharge,2026-10-01 23:22:00,Emergency,DOC010,Discharged
+CASE016,Registration,2026-10-01 18:16:00,General Medicine,DOC005,Discharged
+CASE016,Triage,2026-10-01 18:34:00,Orthopaedics,DOC006,Discharged
+CASE016,Doctor Consultation,2026-10-01 18:54:00,General Medicine,DOC007,Discharged
+CASE016,Laboratory Test,2026-10-01 19:07:00,Orthopaedics,DOC005,Discharged
+CASE016,Pharmacy,2026-10-01 19:41:00,General Medicine,DOC002,Discharged
+CASE016,Discharge,2026-10-01 19:46:00,General Medicine,DOC010,Discharged
+CASE017,Registration,2026-10-01 09:54:00,Emergency,DOC009,Discharged
+CASE017,Triage,2026-10-01 10:15:00,Emergency,DOC006,Discharged
+CASE017,Doctor Consultation,2026-10-01 10:24:00,Emergency,DOC006,Discharged
+CASE017,Pharmacy,2026-10-01 10:47:00,Emergency,DOC008,Discharged
+CASE017,Discharge,2026-10-01 11:26:00,Orthopaedics,DOC005,Discharged
+CASE018,Registration,2026-10-01 17:06:00,Orthopaedics,DOC009,Discharged
+CASE018,Triage,2026-10-01 17:30:00,Orthopaedics,DOC002,Discharged
+CASE018,Doctor Consultation,2026-10-01 17:43:00,General Medicine,DOC002,Discharged
+CASE018,Laboratory Test,2026-10-01 17:54:00,Orthopaedics,DOC009,Discharged
+CASE018,Pharmacy,2026-10-01 18:08:00,General Medicine,DOC005,Discharged
+CASE018,Discharge,2026-10-01 18:51:00,Emergency,DOC006,Discharged
+CASE019,Registration,2026-10-01 13:07:00,General Medicine,DOC005,Discharged
+CASE019,Triage,2026-10-01 13:15:00,Emergency,DOC007,Discharged
+CASE019,Doctor Consultation,2026-10-01 13:37:00,Emergency,DOC001,Discharged
+CASE019,Laboratory Test,2026-10-01 14:03:00,Emergency,DOC005,Discharged
+CASE019,Pharmacy,2026-10-01 14:18:00,Orthopaedics,DOC008,Discharged
+CASE019,Discharge,2026-10-01 14:58:00,Orthopaedics,DOC007,Discharged
+CASE020,Registration,2026-10-01 11:11:00,Emergency,DOC006,Discharged
+CASE020,Triage,2026-10-01 11:53:00,Orthopaedics,DOC003,Discharged
+CASE020,Triage,2026-10-01 12:25:00,Emergency,DOC001,Discharged
+CASE020,Doctor Consultation,2026-10-01 12:49:00,General Medicine,DOC001,Discharged
+CASE020,Laboratory Test,2026-10-01 13:16:00,Emergency,DOC004,Discharged
+CASE020,X-Ray,2026-10-01 13:27:00,General Medicine,DOC009,Discharged
+CASE020,Pharmacy,2026-10-01 13:58:00,Orthopaedics,DOC003,Discharged
+CASE020,Discharge,2026-10-01 14:18:00,Emergency,DOC003,Discharged
+CASE021,Registration,2026-10-01 14:11:00,Orthopaedics,DOC004,Discharged
+CASE021,Triage,2026-10-01 14:33:00,Emergency,DOC002,Discharged
+CASE021,Doctor Consultation,2026-10-01 15:02:00,Emergency,DOC008,Discharged
+CASE021,X-Ray,2026-10-01 15:21:00,Emergency,DOC008,Discharged
+CASE021,Pharmacy,2026-10-01 15:48:00,General Medicine,DOC004,Discharged
+CASE021,Discharge,2026-10-01 16:07:00,Emergency,DOC004,Discharged
+CASE022,Registration,2026-10-01 09:33:00,General Medicine,DOC009,Discharged
+CASE022,Triage,2026-10-01 10:03:00,Orthopaedics,DOC009,Discharged
+CASE022,Doctor Consultation,2026-10-01 10:29:00,Emergency,DOC002,Discharged
+CASE022,Laboratory Test,2026-10-01 10:50:00,Emergency,DOC010,Discharged
+CASE022,X-Ray,2026-10-01 11:11:00,Emergency,DOC002,Discharged
+CASE022,Pharmacy,2026-10-01 11:54:00,General Medicine,DOC006,Discharged
+CASE022,Discharge,2026-10-01 12:19:00,General Medicine,DOC010,Discharged
+CASE023,Registration,2026-10-01 18:07:00,General Medicine,DOC001,Discharged
+CASE023,Triage,2026-10-01 18:39:00,Emergency,DOC009,Discharged
+CASE023,Doctor Consultation,2026-10-01 19:18:00,Orthopaedics,DOC004,Discharged
+CASE023,X-Ray,2026-10-01 19:46:00,General Medicine,DOC002,Discharged
+CASE023,Pharmacy,2026-10-01 20:12:00,Orthopaedics,DOC006,Discharged
+CASE023,Discharge,2026-10-01 20:24:00,Orthopaedics,DOC005,Discharged
+CASE024,Registration,2026-10-01 14:04:00,Orthopaedics,DOC005,Discharged
+CASE024,Triage,2026-10-01 14:44:00,Emergency,DOC004,Discharged
+CASE024,Doctor Consultation,2026-10-01 15:15:00,Orthopaedics,DOC007,Discharged
+CASE024,Laboratory Test,2026-10-01 15:31:00,Orthopaedics,DOC010,Discharged
+CASE024,Pharmacy,2026-10-01 15:55:00,General Medicine,DOC009,Discharged
+CASE024,Discharge,2026-10-01 16:00:00,General Medicine,DOC005,Discharged
+CASE025,Registration,2026-10-01 14:03:00,General Medicine,DOC008,Discharged
+CASE025,Triage,2026-10-01 14:21:00,Orthopaedics,DOC008,Discharged
+CASE025,Doctor Consultation,2026-10-01 14:36:00,Orthopaedics,DOC002,Discharged
+CASE025,Laboratory Test,2026-10-01 14:59:00,Orthopaedics,DOC010,Discharged
+CASE025,Pharmacy,2026-10-01 15:25:00,Emergency,DOC004,Discharged
+CASE025,Discharge,2026-10-01 15:49:00,Emergency,DOC004,Discharged
+CASE026,Registration,2026-10-01 16:50:00,Emergency,DOC008,Discharged
+CASE026,Triage,2026-10-01 17:21:00,Orthopaedics,DOC010,Discharged
+CASE026,Doctor Consultation,2026-10-01 17:38:00,Orthopaedics,DOC007,Discharged
+CASE026,Laboratory Test,2026-10-01 18:14:00,General Medicine,DOC004,Discharged
+CASE026,X-Ray,2026-10-01 18:28:00,Orthopaedics,DOC001,Discharged
+CASE026,Pharmacy,2026-10-01 18:39:00,General Medicine,DOC004,Discharged
+CASE026,Discharge,2026-10-01 18:55:00,Orthopaedics,DOC009,Discharged
+CASE027,Registration,2026-10-01 10:38:00,Emergency,DOC008,Discharged
+CASE027,Triage,2026-10-01 11:16:00,Orthopaedics,DOC010,Discharged
+CASE027,Doctor Consultation,2026-10-01 11:41:00,General Medicine,DOC010,Discharged
+CASE027,Laboratory Test,2026-10-01 12:18:00,General Medicine,DOC009,Discharged
+CASE027,Pharmacy,2026-10-01 12:51:00,Emergency,DOC008,Discharged
+CASE027,Discharge,2026-10-01 13:24:00,General Medicine,DOC004,Discharged
+CASE028,Registration,2026-10-01 17:29:00,Orthopaedics,DOC004,Discharged
+CASE028,Triage,2026-10-01 17:51:00,General Medicine,DOC002,Discharged
+CASE028,Doctor Consultation,2026-10-01 18:14:00,Emergency,DOC005,Discharged
+CASE028,X-Ray,2026-10-01 18:40:00,General Medicine,DOC009,Discharged
+CASE028,Pharmacy,2026-10-01 18:50:00,Emergency,DOC003,Discharged
+CASE028,Discharge,2026-10-01 19:09:00,General Medicine,DOC003,Discharged
+CASE029,Registration,2026-10-01 15:23:00,Orthopaedics,DOC008,Discharged
+CASE029,Triage,2026-10-01 15:54:00,Emergency,DOC004,Discharged
+CASE029,Doctor Consultation,2026-10-01 16:25:00,General Medicine,DOC010,Discharged
+CASE029,X-Ray,2026-10-01 16:31:00,Orthopaedics,DOC007,Discharged
+CASE029,Pharmacy,2026-10-01 17:06:00,Emergency,DOC006,Discharged
+CASE029,Discharge,2026-10-01 17:30:00,General Medicine,DOC007,Discharged
+CASE030,Registration,2026-10-01 12:21:00,Emergency,DOC005,Discharged
+CASE030,Triage,2026-10-01 12:53:00,General Medicine,DOC001,Discharged
+CASE030,Triage,2026-10-01 13:22:00,General Medicine,DOC007,Discharged
+CASE030,Doctor Consultation,2026-10-01 13:37:00,General Medicine,DOC003,Discharged
+CASE030,Laboratory Test,2026-10-01 17:37:00,Orthopaedics,DOC001,Discharged
+CASE030,Pharmacy,2026-10-01 18:07:00,Orthopaedics,DOC010,Discharged
+CASE030,Discharge,2026-10-01 18:13:00,Emergency,DOC007,Discharged
+CASE031,Registration,2026-10-01 09:12:00,General Medicine,DOC006,Discharged
+CASE031,Triage,2026-10-01 09:30:00,General Medicine,DOC006,Discharged
+CASE031,Doctor Consultation,2026-10-01 09:56:00,General Medicine,DOC005,Discharged
+CASE031,Laboratory Test,2026-10-01 10:27:00,General Medicine,DOC002,Discharged
+CASE031,Pharmacy,2026-10-01 11:02:00,Emergency,DOC009,Discharged
+CASE031,Discharge,2026-10-01 11:10:00,General Medicine,DOC004,Discharged
+CASE032,Registration,2026-10-01 08:47:00,Emergency,DOC004,Discharged
+CASE032,Triage,2026-10-01 08:53:00,Orthopaedics,DOC003,Discharged
+CASE032,Doctor Consultation,2026-10-01 09:13:00,Emergency,DOC008,Discharged
+CASE032,Pharmacy,2026-10-01 09:25:00,Orthopaedics,DOC004,Discharged
+CASE032,Discharge,2026-10-01 09:59:00,Orthopaedics,DOC005,Discharged
+CASE033,Registration,2026-10-01 10:12:00,General Medicine,DOC002,Discharged
+CASE033,Triage,2026-10-01 10:54:00,Emergency,DOC005,Discharged
+CASE033,Doctor Consultation,2026-10-01 11:35:00,Orthopaedics,DOC007,Discharged
+CASE033,X-Ray,2026-10-01 12:05:00,Orthopaedics,DOC004,Discharged
+CASE033,Pharmacy,2026-10-01 12:14:00,Orthopaedics,DOC004,Discharged
+CASE033,Discharge,2026-10-01 12:25:00,Orthopaedics,DOC005,Discharged
+CASE034,Registration,2026-10-01 10:44:00,Emergency,DOC006,Discharged
+CASE034,Triage,2026-10-01 11:23:00,General Medicine,DOC006,Discharged
+CASE034,Doctor Consultation,2026-10-01 11:32:00,Orthopaedics,DOC006,Discharged
+CASE034,Pharmacy,2026-10-01 11:37:00,General Medicine,DOC008,Discharged
+CASE034,Discharge,2026-10-01 11:48:00,General Medicine,DOC006,Discharged
+CASE035,Registration,2026-10-01 11:08:00,Emergency,DOC009,Discharged
+CASE035,Triage,2026-10-01 11:30:00,Orthopaedics,DOC009,Discharged
+CASE035,Doctor Consultation,2026-10-01 12:05:00,General Medicine,DOC007,Discharged
+CASE035,Laboratory Test,2026-10-01 12:47:00,General Medicine,DOC006,Discharged
+CASE035,Pharmacy,2026-10-01 13:07:00,Emergency,DOC005,Discharged
+CASE035,Discharge,2026-10-01 13:40:00,Emergency,DOC008,Discharged
+CASE036,Registration,2026-10-01 13:50:00,General Medicine,DOC006,Discharged
+CASE036,Triage,2026-10-01 14:06:00,General Medicine,DOC004,Discharged
+CASE036,Doctor Consultation,2026-10-01 14:33:00,General Medicine,DOC006,Discharged
+CASE036,Laboratory Test,2026-10-01 14:55:00,Orthopaedics,DOC005,Discharged
+CASE036,Pharmacy,2026-10-01 15:35:00,Emergency,DOC009,Discharged
+CASE036,Discharge,2026-10-01 15:52:00,Emergency,DOC004,Discharged
+CASE037,Registration,2026-10-01 12:41:00,Orthopaedics,DOC008,Discharged
+CASE037,Triage,2026-10-01 13:14:00,Emergency,DOC002,Discharged
+CASE037,Doctor Consultation,2026-10-01 13:37:00,Emergency,DOC007,Discharged
+CASE037,Pharmacy,2026-10-01 13:57:00,General Medicine,DOC010,Discharged
+CASE037,Discharge,2026-10-01 14:25:00,General Medicine,DOC009,Discharged
+CASE038,Registration,2026-10-01 17:49:00,General Medicine,DOC008,Discharged
+CASE038,Triage,2026-10-01 18:11:00,General Medicine,DOC005,Discharged
+CASE038,Doctor Consultation,2026-10-01 18:30:00,Emergency,DOC004,Discharged
+CASE038,Laboratory Test,2026-10-01 18:55:00,Emergency,DOC009,Discharged
+CASE038,Pharmacy,2026-10-01 19:11:00,Emergency,DOC004,Discharged
+CASE038,Discharge,2026-10-01 19:46:00,General Medicine,DOC010,Discharged
+CASE039,Registration,2026-10-01 13:00:00,Emergency,DOC005,Discharged
+CASE039,Triage,2026-10-01 13:19:00,General Medicine,DOC003,Discharged
+CASE039,Doctor Consultation,2026-10-01 13:43:00,Emergency,DOC009,Discharged
+CASE039,Pharmacy,2026-10-01 13:56:00,General Medicine,DOC001,Discharged
+CASE039,Discharge,2026-10-01 14:04:00,Orthopaedics,DOC005,Discharged
+CASE040,Registration,2026-10-01 16:33:00,Emergency,DOC010,Discharged
+CASE040,Triage,2026-10-01 16:56:00,General Medicine,DOC008,Discharged
+CASE040,Triage,2026-10-01 17:29:00,General Medicine,DOC003,Discharged
+CASE040,Doctor Consultation,2026-10-01 17:37:00,General Medicine,DOC008,Discharged
+CASE040,X-Ray,2026-10-01 17:49:00,Emergency,DOC007,Discharged
+CASE040,Pharmacy,2026-10-01 18:25:00,Emergency,DOC010,Discharged
+CASE040,Discharge,2026-10-01 19:10:00,Orthopaedics,DOC001,Discharged
+CASE041,Registration,2026-10-01 13:21:00,Emergency,DOC002,Discharged
+CASE041,Triage,2026-10-01 14:01:00,General Medicine,DOC010,Discharged
+CASE041,Doctor Consultation,2026-10-01 14:44:00,Orthopaedics,DOC004,Discharged
+CASE041,Laboratory Test,2026-10-01 15:22:00,General Medicine,DOC008,Discharged
+CASE041,Pharmacy,2026-10-01 15:55:00,General Medicine,DOC010,Discharged
+CASE041,Discharge,2026-10-01 16:27:00,General Medicine,DOC010,Discharged
+CASE042,Registration,2026-10-01 09:59:00,Orthopaedics,DOC004,Discharged
+CASE042,Triage,2026-10-01 10:20:00,Orthopaedics,DOC002,Discharged
+CASE042,Doctor Consultation,2026-10-01 10:35:00,Emergency,DOC003,Discharged
+CASE042,Laboratory Test,2026-10-01 11:15:00,Emergency,DOC003,Discharged
+CASE042,Pharmacy,2026-10-01 11:20:00,General Medicine,DOC008,Discharged
+CASE042,Discharge,2026-10-01 12:03:00,General Medicine,DOC005,Discharged
+CASE043,Registration,2026-10-01 13:23:00,Emergency,DOC004,Discharged
+CASE043,Triage,2026-10-01 13:44:00,Orthopaedics,DOC010,Discharged
+CASE043,Doctor Consultation,2026-10-01 14:01:00,General Medicine,DOC002,Discharged
+CASE043,Laboratory Test,2026-10-01 14:40:00,Emergency,DOC003,Discharged
+CASE043,X-Ray,2026-10-01 15:02:00,Emergency,DOC002,Discharged
+CASE043,Pharmacy,2026-10-01 15:10:00,Emergency,DOC005,Discharged
+CASE043,Discharge,2026-10-01 15:53:00,Orthopaedics,DOC010,Discharged
+CASE044,Registration,2026-10-01 16:23:00,Orthopaedics,DOC007,Discharged
+CASE044,Triage,2026-10-01 16:45:00,Orthopaedics,DOC009,Discharged
+CASE044,Doctor Consultation,2026-10-01 17:21:00,General Medicine,DOC002,Discharged
+CASE044,Pharmacy,2026-10-01 18:04:00,Emergency,DOC007,Discharged
+CASE044,Discharge,2026-10-01 18:29:00,Orthopaedics,DOC005,Discharged
+CASE045,Registration,2026-10-01 18:31:00,Emergency,DOC005,Discharged
+CASE045,Triage,2026-10-01 19:12:00,Emergency,DOC003,Discharged
+CASE045,Doctor Consultation,2026-10-01 19:47:00,Orthopaedics,DOC008,Discharged
+CASE045,Laboratory Test,2026-10-01 23:47:00,Emergency,DOC010,Discharged
+CASE045,X-Ray,2026-10-02 00:19:00,Orthopaedics,DOC008,Discharged
+CASE045,Pharmacy,2026-10-02 00:29:00,General Medicine,DOC006,Discharged
+CASE045,Discharge,2026-10-02 01:00:00,General Medicine,DOC006,Discharged
+CASE046,Registration,2026-10-01 14:08:00,Orthopaedics,DOC008,Discharged
+CASE046,Triage,2026-10-01 14:31:00,Orthopaedics,DOC007,Discharged
+CASE046,Doctor Consultation,2026-10-01 15:11:00,Emergency,DOC008,Discharged
+CASE046,Pharmacy,2026-10-01 15:21:00,General Medicine,DOC005,Discharged
+CASE046,Discharge,2026-10-01 15:46:00,Emergency,DOC007,Discharged
+CASE047,Registration,2026-10-01 08:40:00,General Medicine,DOC007,Discharged
+CASE047,Triage,2026-10-01 08:48:00,Emergency,DOC009,Discharged
+CASE047,Doctor Consultation,2026-10-01 09:16:00,Orthopaedics,DOC008,Discharged
+CASE047,Pharmacy,2026-10-01 10:01:00,General Medicine,DOC001,Discharged
+CASE047,Discharge,2026-10-01 10:19:00,General Medicine,DOC009,Discharged
+CASE048,Registration,2026-10-01 16:28:00,Emergency,DOC010,Discharged
+CASE048,Triage,2026-10-01 16:48:00,Orthopaedics,DOC003,Discharged
+CASE048,Doctor Consultation,2026-10-01 17:12:00,Orthopaedics,DOC001,Discharged
+CASE048,Laboratory Test,2026-10-01 17:52:00,General Medicine,DOC002,Discharged
+CASE048,X-Ray,2026-10-01 18:11:00,Emergency,DOC008,Discharged
+CASE048,Pharmacy,2026-10-01 18:23:00,Orthopaedics,DOC003,Discharged
+CASE048,Discharge,2026-10-01 18:59:00,Orthopaedics,DOC005,Discharged
+CASE049,Registration,2026-10-01 16:49:00,Emergency,DOC008,Discharged
+CASE049,Triage,2026-10-01 17:29:00,Emergency,DOC007,Discharged
+CASE049,Doctor Consultation,2026-10-01 17:46:00,Orthopaedics,DOC009,Discharged
+CASE049,Laboratory Test,2026-10-01 17:59:00,Emergency,DOC005,Discharged
+CASE049,X-Ray,2026-10-01 18:30:00,General Medicine,DOC009,Discharged
+CASE049,Pharmacy,2026-10-01 18:52:00,Emergency,DOC005,Discharged
+CASE049,Discharge,2026-10-01 19:16:00,Orthopaedics,DOC010,Discharged
+CASE050,Registration,2026-10-01 11:05:00,Orthopaedics,DOC008,Discharged
+CASE050,Triage,2026-10-01 11:32:00,General Medicine,DOC009,Discharged
+CASE050,Triage,2026-10-01 12:11:00,General Medicine,DOC008,Discharged
+CASE050,Doctor Consultation,2026-10-01 12:36:00,Emergency,DOC004,Discharged
+CASE050,Pharmacy,2026-10-01 13:17:00,General Medicine,DOC004,Discharged
+CASE050,Discharge,2026-10-01 13:48:00,Emergency,DOC006,Discharged
+CASE051,Registration,2026-10-01 14:59:00,Orthopaedics,DOC003,Discharged
+CASE051,Triage,2026-10-01 15:35:00,Emergency,DOC003,Discharged
+CASE051,Doctor Consultation,2026-10-01 16:12:00,Orthopaedics,DOC006,Discharged
+CASE051,Pharmacy,2026-10-01 16:23:00,General Medicine,DOC002,Discharged
+CASE051,Discharge,2026-10-01 17:01:00,General Medicine,DOC001,Discharged
+CASE052,Registration,2026-10-01 10:47:00,General Medicine,DOC005,Discharged
+CASE052,Triage,2026-10-01 11:13:00,Orthopaedics,DOC007,Discharged
+CASE052,Doctor Consultation,2026-10-01 11:23:00,General Medicine,DOC009,Discharged
+CASE052,Pharmacy,2026-10-01 11:52:00,General Medicine,DOC008,Discharged
+CASE052,Discharge,2026-10-01 12:31:00,Emergency,DOC010,Discharged
+CASE053,Registration,2026-10-01 13:13:00,Orthopaedics,DOC002,Discharged
+CASE053,Triage,2026-10-01 13:45:00,Emergency,DOC002,Discharged
+CASE053,Doctor Consultation,2026-10-01 14:18:00,Emergency,DOC005,Discharged
+CASE053,Laboratory Test,2026-10-01 14:24:00,Emergency,DOC006,Discharged
+CASE053,Pharmacy,2026-10-01 14:32:00,General Medicine,DOC006,Discharged
+CASE053,Discharge,2026-10-01 15:00:00,General Medicine,DOC003,Discharged
+CASE054,Registration,2026-10-01 11:19:00,Emergency,DOC002,Discharged
+CASE054,Triage,2026-10-01 12:03:00,General Medicine,DOC010,Discharged
+CASE054,Doctor Consultation,2026-10-01 12:23:00,General Medicine,DOC010,Discharged
+CASE054,Laboratory Test,2026-10-01 12:37:00,Emergency,DOC008,Discharged
+CASE054,Pharmacy,2026-10-01 13:22:00,General Medicine,DOC008,Discharged
+CASE054,Discharge,2026-10-01 13:43:00,Orthopaedics,DOC001,Discharged
+CASE055,Registration,2026-10-01 13:33:00,Emergency,DOC002,Discharged
+CASE055,Triage,2026-10-01 14:06:00,General Medicine,DOC010,Discharged
+CASE055,Doctor Consultation,2026-10-01 14:30:00,Orthopaedics,DOC007,Discharged
+CASE055,Pharmacy,2026-10-01 14:51:00,General Medicine,DOC005,Discharged
+CASE055,Discharge,2026-10-01 15:08:00,General Medicine,DOC008,Discharged
+CASE056,Registration,2026-10-01 14:48:00,General Medicine,DOC005,Discharged
+CASE056,Triage,2026-10-01 14:54:00,Orthopaedics,DOC007,Discharged
+CASE056,Doctor Consultation,2026-10-01 15:16:00,Emergency,DOC010,Discharged
+CASE056,Laboratory Test,2026-10-01 15:24:00,Orthopaedics,DOC008,Discharged
+CASE056,Pharmacy,2026-10-01 15:47:00,Emergency,DOC010,Discharged
+CASE056,Discharge,2026-10-01 16:14:00,Emergency,DOC004,Discharged
+CASE057,Registration,2026-10-01 11:05:00,Emergency,DOC001,Discharged
+CASE057,Triage,2026-10-01 11:29:00,General Medicine,DOC001,Discharged
+CASE057,Doctor Consultation,2026-10-01 12:11:00,General Medicine,DOC003,Discharged
+CASE057,Laboratory Test,2026-10-01 12:21:00,General Medicine,DOC006,Discharged
+CASE057,Pharmacy,2026-10-01 12:52:00,Emergency,DOC004,Discharged
+CASE057,Discharge,2026-10-01 13:05:00,Orthopaedics,DOC006,Discharged
+CASE058,Registration,2026-10-01 11:09:00,General Medicine,DOC005,Discharged
+CASE058,Triage,2026-10-01 11:35:00,Emergency,DOC008,Discharged
+CASE058,Doctor Consultation,2026-10-01 11:44:00,Emergency,DOC004,Discharged
+CASE058,Laboratory Test,2026-10-01 12:14:00,Orthopaedics,DOC006,Discharged
+CASE058,Pharmacy,2026-10-01 12:24:00,General Medicine,DOC001,Discharged
+CASE058,Discharge,2026-10-01 12:45:00,Orthopaedics,DOC002,Discharged
+CASE059,Registration,2026-10-01 13:10:00,General Medicine,DOC006,Discharged
+CASE059,Triage,2026-10-01 13:21:00,Orthopaedics,DOC004,Discharged
+CASE059,Doctor Consultation,2026-10-01 13:56:00,Emergency,DOC010,Discharged
+CASE059,Laboratory Test,2026-10-01 14:36:00,General Medicine,DOC010,Discharged
+CASE059,Pharmacy,2026-10-01 14:55:00,Orthopaedics,DOC002,Discharged
+CASE059,Discharge,2026-10-01 15:40:00,General Medicine,DOC005,Discharged
+CASE060,Registration,2026-10-01 08:53:00,General Medicine,DOC008,Discharged
+CASE060,Triage,2026-10-01 09:05:00,Emergency,DOC004,Discharged
+CASE060,Triage,2026-10-01 09:44:00,Emergency,DOC007,Discharged
+CASE060,Doctor Consultation,2026-10-01 10:18:00,General Medicine,DOC009,Discharged
+CASE060,Laboratory Test,2026-10-01 14:18:00,Orthopaedics,DOC003,Discharged
+CASE060,X-Ray,2026-10-01 14:49:00,Orthopaedics,DOC002,Discharged
+CASE060,Pharmacy,2026-10-01 15:25:00,Orthopaedics,DOC007,Discharged
+CASE060,Discharge,2026-10-01 15:47:00,Emergency,DOC006,Discharged
+CASE061,Registration,2026-10-01 12:29:00,Emergency,DOC006,Discharged
+CASE061,Triage,2026-10-01 13:08:00,Orthopaedics,DOC006,Discharged
+CASE061,Doctor Consultation,2026-10-01 13:16:00,General Medicine,DOC005,Discharged
+CASE061,Laboratory Test,2026-10-01 13:33:00,Emergency,DOC008,Discharged
+CASE061,Pharmacy,2026-10-01 13:43:00,Orthopaedics,DOC004,Discharged
+CASE061,Discharge,2026-10-01 14:28:00,Orthopaedics,DOC001,Discharged
+CASE062,Registration,2026-10-01 10:49:00,Emergency,DOC002,Discharged
+CASE062,Triage,2026-10-01 11:29:00,Emergency,DOC010,Discharged
+CASE062,Doctor Consultation,2026-10-01 11:47:00,Emergency,DOC006,Discharged
+CASE062,Laboratory Test,2026-10-01 12:01:00,Orthopaedics,DOC001,Discharged
+CASE062,Pharmacy,2026-10-01 12:23:00,Emergency,DOC003,Discharged
+CASE062,Discharge,2026-10-01 13:02:00,General Medicine,DOC003,Discharged
+CASE063,Registration,2026-10-01 10:19:00,General Medicine,DOC004,Discharged
+CASE063,Triage,2026-10-01 11:01:00,General Medicine,DOC001,Discharged
+CASE063,Doctor Consultation,2026-10-01 11:17:00,General Medicine,DOC001,Discharged
+CASE063,Laboratory Test,2026-10-01 11:30:00,Orthopaedics,DOC007,Discharged
+CASE063,Pharmacy,2026-10-01 12:08:00,Emergency,DOC002,Discharged
+CASE063,Discharge,2026-10-01 12:43:00,General Medicine,DOC006,Discharged
+CASE064,Registration,2026-10-01 16:54:00,Orthopaedics,DOC001,Discharged
+CASE064,Triage,2026-10-01 17:32:00,General Medicine,DOC008,Discharged
+CASE064,Doctor Consultation,2026-10-01 17:38:00,Emergency,DOC008,Discharged
+CASE064,Laboratory Test,2026-10-01 18:08:00,General Medicine,DOC002,Discharged
+CASE064,X-Ray,2026-10-01 18:44:00,Orthopaedics,DOC008,Discharged
+CASE064,Pharmacy,2026-10-01 18:53:00,Emergency,DOC006,Discharged
+CASE064,Discharge,2026-10-01 19:36:00,Emergency,DOC002,Discharged
+CASE065,Registration,2026-10-01 18:39:00,Orthopaedics,DOC006,Discharged
+CASE065,Triage,2026-10-01 19:08:00,Orthopaedics,DOC009,Discharged
+CASE065,Doctor Consultation,2026-10-01 19:31:00,General Medicine,DOC009,Discharged
+CASE065,Laboratory Test,2026-10-01 20:14:00,General Medicine,DOC002,Discharged
+CASE065,Pharmacy,2026-10-01 20:26:00,Orthopaedics,DOC009,Discharged
+CASE065,Discharge,2026-10-01 20:44:00,General Medicine,DOC008,Discharged
+CASE066,Registration,2026-10-01 16:14:00,General Medicine,DOC002,Discharged
+CASE066,Triage,2026-10-01 16:39:00,General Medicine,DOC006,Discharged
+CASE066,Doctor Consultation,2026-10-01 17:00:00,General Medicine,DOC003,Discharged
+CASE066,Pharmacy,2026-10-01 17:35:00,Emergency,DOC002,Discharged
+CASE066,Discharge,2026-10-01 17:45:00,Emergency,DOC007,Discharged
+CASE067,Registration,2026-10-01 10:53:00,Emergency,DOC010,Discharged
+CASE067,Triage,2026-10-01 11:33:00,Orthopaedics,DOC006,Discharged
+CASE067,Doctor Consultation,2026-10-01 11:45:00,General Medicine,DOC006,Discharged
+CASE067,Laboratory Test,2026-10-01 12:17:00,Orthopaedics,DOC001,Discharged
+CASE067,Pharmacy,2026-10-01 12:40:00,Orthopaedics,DOC005,Discharged
+CASE067,Discharge,2026-10-01 13:07:00,Emergency,DOC010,Discharged
+CASE068,Registration,2026-10-01 16:32:00,Emergency,DOC006,Discharged
+CASE068,Triage,2026-10-01 17:12:00,General Medicine,DOC002,Discharged
+CASE068,Doctor Consultation,2026-10-01 17:34:00,Orthopaedics,DOC004,Discharged
+CASE068,Laboratory Test,2026-10-01 18:06:00,Orthopaedics,DOC010,Discharged
+CASE068,X-Ray,2026-10-01 18:50:00,Orthopaedics,DOC009,Discharged
+CASE068,Pharmacy,2026-10-01 18:56:00,Orthopaedics,DOC005,Discharged
+CASE068,Discharge,2026-10-01 19:02:00,Emergency,DOC005,Discharged
+CASE069,Registration,2026-10-01 14:14:00,Emergency,DOC003,Discharged
+CASE069,Triage,2026-10-01 14:28:00,Orthopaedics,DOC007,Discharged
+CASE069,Doctor Consultation,2026-10-01 14:37:00,Emergency,DOC001,Discharged
+CASE069,Pharmacy,2026-10-01 14:47:00,Orthopaedics,DOC009,Discharged
+CASE069,Discharge,2026-10-01 15:05:00,General Medicine,DOC007,Discharged
+CASE070,Registration,2026-10-01 13:44:00,Orthopaedics,DOC010,Discharged
+CASE070,Triage,2026-10-01 13:54:00,Emergency,DOC003,Discharged
+CASE070,Triage,2026-10-01 14:09:00,Orthopaedics,DOC001,Discharged
+CASE070,Doctor Consultation,2026-10-01 14:19:00,General Medicine,DOC008,Discharged
+CASE070,Laboratory Test,2026-10-01 14:51:00,General Medicine,DOC010,Discharged
+CASE070,X-Ray,2026-10-01 15:24:00,General Medicine,DOC005,Discharged
+CASE070,Pharmacy,2026-10-01 15:42:00,Orthopaedics,DOC002,Discharged
+CASE070,Discharge,2026-10-01 16:09:00,General Medicine,DOC002,Discharged
+CASE071,Registration,2026-10-01 16:56:00,Orthopaedics,DOC005,Discharged
+CASE071,Triage,2026-10-01 17:03:00,Emergency,DOC007,Discharged
+CASE071,Doctor Consultation,2026-10-01 17:46:00,Emergency,DOC001,Discharged
+CASE071,Laboratory Test,2026-10-01 18:04:00,General Medicine,DOC004,Discharged
+CASE071,Pharmacy,2026-10-01 18:17:00,General Medicine,DOC005,Discharged
+CASE071,Discharge,2026-10-01 18:42:00,Emergency,DOC001,Discharged
+CASE072,Registration,2026-10-01 10:41:00,Orthopaedics,DOC004,Discharged
+CASE072,Triage,2026-10-01 11:18:00,Orthopaedics,DOC006,Discharged
+CASE072,Doctor Consultation,2026-10-01 11:27:00,General Medicine,DOC001,Discharged
+CASE072,Laboratory Test,2026-10-01 11:59:00,Emergency,DOC008,Discharged
+CASE072,Pharmacy,2026-10-01 12:08:00,General Medicine,DOC010,Discharged
+CASE072,Discharge,2026-10-01 12:40:00,Orthopaedics,DOC007,Discharged
+CASE073,Registration,2026-10-01 10:27:00,Emergency,DOC006,Discharged
+CASE073,Triage,2026-10-01 10:42:00,Orthopaedics,DOC008,Discharged
+CASE073,Doctor Consultation,2026-10-01 11:10:00,Emergency,DOC007,Discharged
+CASE073,Pharmacy,2026-10-01 11:21:00,Emergency,DOC007,Discharged
+CASE073,Discharge,2026-10-01 12:03:00,General Medicine,DOC009,Discharged
+CASE074,Registration,2026-10-01 14:06:00,General Medicine,DOC003,Discharged
+CASE074,Triage,2026-10-01 14:15:00,Orthopaedics,DOC002,Discharged
+CASE074,Doctor Consultation,2026-10-01 14:53:00,Orthopaedics,DOC004,Discharged
+CASE074,Laboratory Test,2026-10-01 15:20:00,General Medicine,DOC003,Discharged
+CASE074,Pharmacy,2026-10-01 15:40:00,Emergency,DOC003,Discharged
+CASE074,Discharge,2026-10-01 16:01:00,Emergency,DOC003,Discharged
+CASE075,Registration,2026-10-01 09:33:00,Orthopaedics,DOC008,Discharged
+CASE075,Triage,2026-10-01 10:07:00,Orthopaedics,DOC010,Discharged
+CASE075,Doctor Consultation,2026-10-01 10:40:00,Orthopaedics,DOC010,Discharged
+CASE075,Laboratory Test,2026-10-01 14:40:00,Orthopaedics,DOC006,Discharged
+CASE075,Pharmacy,2026-10-01 15:25:00,General Medicine,DOC003,Discharged
+CASE075,Discharge,2026-10-01 15:58:00,Emergency,DOC008,Discharged
+CASE076,Registration,2026-10-01 13:23:00,Emergency,DOC006,Discharged
+CASE076,Triage,2026-10-01 14:00:00,Emergency,DOC005,Discharged
+CASE076,Doctor Consultation,2026-10-01 14:34:00,General Medicine,DOC001,Discharged
+CASE076,Laboratory Test,2026-10-01 14:42:00,General Medicine,DOC005,Discharged
+CASE076,Pharmacy,2026-10-01 14:51:00,Orthopaedics,DOC002,Discharged
+CASE076,Discharge,2026-10-01 15:35:00,Orthopaedics,DOC009,Discharged
+CASE077,Registration,2026-10-01 09:15:00,Orthopaedics,DOC004,Discharged
+CASE077,Triage,2026-10-01 09:40:00,Orthopaedics,DOC008,Discharged
+CASE077,Doctor Consultation,2026-10-01 10:17:00,Emergency,DOC001,Discharged
+CASE077,Laboratory Test,2026-10-01 10:50:00,Emergency,DOC006,Discharged
+CASE077,Pharmacy,2026-10-01 11:00:00,Orthopaedics,DOC003,Discharged
+CASE077,Discharge,2026-10-01 11:07:00,Emergency,DOC008,Discharged
+CASE078,Registration,2026-10-01 11:10:00,General Medicine,DOC005,Discharged
+CASE078,Triage,2026-10-01 11:39:00,General Medicine,DOC006,Discharged
+CASE078,Doctor Consultation,2026-10-01 12:22:00,Emergency,DOC006,Discharged
+CASE078,Pharmacy,2026-10-01 12:31:00,General Medicine,DOC002,Discharged
+CASE078,Discharge,2026-10-01 13:11:00,Orthopaedics,DOC007,Discharged
+CASE079,Registration,2026-10-01 10:59:00,Emergency,DOC010,Discharged
+CASE079,Triage,2026-10-01 11:13:00,General Medicine,DOC005,Discharged
+CASE079,Doctor Consultation,2026-10-01 11:43:00,Emergency,DOC010,Discharged
+CASE079,Laboratory Test,2026-10-01 11:53:00,General Medicine,DOC009,Discharged
+CASE079,Pharmacy,2026-10-01 12:22:00,Orthopaedics,DOC006,Discharged
+CASE079,Discharge,2026-10-01 12:35:00,Orthopaedics,DOC009,Discharged
+CASE080,Registration,2026-10-01 17:08:00,Emergency,DOC006,Discharged
+CASE080,Triage,2026-10-01 17:32:00,Emergency,DOC004,Discharged
+CASE080,Triage,2026-10-01 17:58:00,General Medicine,DOC004,Discharged
+CASE080,Doctor Consultation,2026-10-01 18:17:00,Emergency,DOC003,Discharged
+CASE080,Laboratory Test,2026-10-01 18:26:00,General Medicine,DOC002,Discharged
+CASE080,Pharmacy,2026-10-01 19:03:00,Orthopaedics,DOC009,Discharged
+CASE080,Discharge,2026-10-01 19:10:00,Orthopaedics,DOC006,Discharged
+CASE081,Registration,2026-10-01 14:39:00,Emergency,DOC003,Discharged
+CASE081,Triage,2026-10-01 15:23:00,Emergency,DOC008,Discharged
+CASE081,Doctor Consultation,2026-10-01 15:30:00,General Medicine,DOC006,Discharged
+CASE081,Pharmacy,2026-10-01 15:50:00,General Medicine,DOC010,Discharged
+CASE081,Discharge,2026-10-01 16:13:00,Orthopaedics,DOC008,Discharged
+CASE082,Registration,2026-10-01 16:17:00,General Medicine,DOC010,Discharged
+CASE082,Triage,2026-10-01 16:50:00,General Medicine,DOC005,Discharged
+CASE082,Doctor Consultation,2026-10-01 17:19:00,Orthopaedics,DOC009,Discharged
+CASE082,Laboratory Test,2026-10-01 17:50:00,Emergency,DOC004,Discharged
+CASE082,X-Ray,2026-10-01 18:33:00,Emergency,DOC005,Discharged
+CASE082,Pharmacy,2026-10-01 18:41:00,Orthopaedics,DOC008,Discharged
+CASE082,Discharge,2026-10-01 19:09:00,Orthopaedics,DOC002,Discharged
+CASE083,Registration,2026-10-01 10:30:00,Emergency,DOC003,Discharged
+CASE083,Triage,2026-10-01 10:52:00,General Medicine,DOC009,Discharged
+CASE083,Doctor Consultation,2026-10-01 11:06:00,General Medicine,DOC002,Discharged
+CASE083,Pharmacy,2026-10-01 11:25:00,General Medicine,DOC006,Discharged
+CASE083,Discharge,2026-10-01 11:31:00,General Medicine,DOC001,Discharged
+CASE084,Registration,2026-10-01 14:45:00,General Medicine,DOC004,Discharged
+CASE084,Triage,2026-10-01 14:51:00,General Medicine,DOC002,Discharged
+CASE084,Doctor Consultation,2026-10-01 15:17:00,Emergency,DOC003,Discharged
+CASE084,Laboratory Test,2026-10-01 15:24:00,General Medicine,DOC008,Discharged
+CASE084,Pharmacy,2026-10-01 15:37:00,Orthopaedics,DOC008,Discharged
+CASE084,Discharge,2026-10-01 16:10:00,Orthopaedics,DOC001,Discharged
+CASE085,Registration,2026-10-01 11:54:00,Orthopaedics,DOC010,Discharged
+CASE085,Triage,2026-10-01 12:32:00,General Medicine,DOC002,Discharged
+CASE085,Doctor Consultation,2026-10-01 12:55:00,Emergency,DOC005,Discharged
+CASE085,X-Ray,2026-10-01 13:07:00,Emergency,DOC004,Discharged
+CASE085,Pharmacy,2026-10-01 13:38:00,Orthopaedics,DOC010,Discharged
+CASE085,Discharge,2026-10-01 14:12:00,Emergency,DOC002,Discharged
+CASE086,Registration,2026-10-01 17:14:00,Orthopaedics,DOC009,Discharged
+CASE086,Triage,2026-10-01 17:55:00,Emergency,DOC003,Discharged
+CASE086,Doctor Consultation,2026-10-01 18:18:00,General Medicine,DOC001,Discharged
+CASE086,Pharmacy,2026-10-01 19:02:00,General Medicine,DOC004,Discharged
+CASE086,Discharge,2026-10-01 19:43:00,General Medicine,DOC003,Discharged
+CASE087,Registration,2026-10-01 14:18:00,Orthopaedics,DOC009,Discharged
+CASE087,Triage,2026-10-01 14:55:00,Orthopaedics,DOC009,Discharged
+CASE087,Doctor Consultation,2026-10-01 15:01:00,General Medicine,DOC008,Discharged
+CASE087,X-Ray,2026-10-01 15:08:00,Orthopaedics,DOC007,Discharged
+CASE087,Pharmacy,2026-10-01 15:36:00,General Medicine,DOC001,Discharged
+CASE087,Discharge,2026-10-01 16:03:00,Emergency,DOC006,Discharged
+CASE088,Registration,2026-10-01 10:28:00,Orthopaedics,DOC006,Discharged
+CASE088,Triage,2026-10-01 10:41:00,Emergency,DOC006,Discharged
+CASE088,Doctor Consultation,2026-10-01 11:20:00,General Medicine,DOC003,Discharged
+CASE088,Laboratory Test,2026-10-01 11:54:00,Orthopaedics,DOC008,Discharged
+CASE088,Pharmacy,2026-10-01 12:39:00,Emergency,DOC003,Discharged
+CASE088,Discharge,2026-10-01 12:48:00,Orthopaedics,DOC008,Discharged
+CASE089,Registration,2026-10-01 11:31:00,General Medicine,DOC005,Discharged
+CASE089,Triage,2026-10-01 12:08:00,General Medicine,DOC009,Discharged
+CASE089,Doctor Consultation,2026-10-01 12:43:00,General Medicine,DOC001,Discharged
+CASE089,Laboratory Test,2026-10-01 13:00:00,General Medicine,DOC006,Discharged
+CASE089,X-Ray,2026-10-01 13:08:00,Orthopaedics,DOC006,Discharged
+CASE089,Pharmacy,2026-10-01 13:30:00,Emergency,DOC006,Discharged
+CASE089,Discharge,2026-10-01 14:02:00,General Medicine,DOC008,Discharged
+CASE090,Registration,2026-10-01 11:47:00,Orthopaedics,DOC008,Discharged
+CASE090,Triage,2026-10-01 12:15:00,Orthopaedics,DOC005,Discharged
+CASE090,Triage,2026-10-01 12:25:00,Orthopaedics,DOC007,Discharged
+CASE090,Doctor Consultation,2026-10-01 12:35:00,General Medicine,DOC010,Discharged
+CASE090,Pharmacy,2026-10-01 12:51:00,Orthopaedics,DOC005,Discharged
+CASE090,Discharge,2026-10-01 13:16:00,Emergency,DOC002,Discharged
+CASE091,Registration,2026-10-01 16:19:00,Orthopaedics,DOC007,Discharged
+CASE091,Triage,2026-10-01 16:34:00,Orthopaedics,DOC008,Discharged
+CASE091,Doctor Consultation,2026-10-01 17:01:00,General Medicine,DOC001,Discharged
+CASE091,Laboratory Test,2026-10-01 17:28:00,Orthopaedics,DOC007,Discharged
+CASE091,X-Ray,2026-10-01 17:50:00,Orthopaedics,DOC001,Discharged
+CASE091,Pharmacy,2026-10-01 17:59:00,Orthopaedics,DOC007,Discharged
+CASE091,Discharge,2026-10-01 18:27:00,Orthopaedics,DOC003,Discharged
+CASE092,Registration,2026-10-01 15:35:00,Emergency,DOC002,Discharged
+CASE092,Triage,2026-10-01 15:55:00,Orthopaedics,DOC006,Discharged
+CASE092,Doctor Consultation,2026-10-01 16:23:00,General Medicine,DOC010,Discharged
+CASE092,X-Ray,2026-10-01 16:30:00,Orthopaedics,DOC003,Discharged
+CASE092,Pharmacy,2026-10-01 17:03:00,General Medicine,DOC006,Discharged
+CASE092,Discharge,2026-10-01 17:36:00,Emergency,DOC010,Discharged
+CASE093,Registration,2026-10-01 13:43:00,Emergency,DOC002,Discharged
+CASE093,Triage,2026-10-01 13:49:00,Orthopaedics,DOC003,Discharged
+CASE093,Doctor Consultation,2026-10-01 14:25:00,Orthopaedics,DOC007,Discharged
+CASE093,Laboratory Test,2026-10-01 15:05:00,Emergency,DOC005,Discharged
+CASE093,Pharmacy,2026-10-01 15:26:00,Orthopaedics,DOC008,Discharged
+CASE093,Discharge,2026-10-01 15:44:00,Orthopaedics,DOC005,Discharged
+CASE094,Registration,2026-10-01 11:36:00,Emergency,DOC002,Discharged
+CASE094,Triage,2026-10-01 12:09:00,Emergency,DOC008,Discharged
+CASE094,Doctor Consultation,2026-10-01 12:19:00,Orthopaedics,DOC006,Discharged
+CASE094,Pharmacy,2026-10-01 12:46:00,Orthopaedics,DOC002,Discharged
+CASE094,Discharge,2026-10-01 13:26:00,Orthopaedics,DOC005,Discharged
+CASE095,Registration,2026-10-01 11:26:00,Orthopaedics,DOC004,Discharged
+CASE095,Triage,2026-10-01 11:38:00,Emergency,DOC003,Discharged
+CASE095,Doctor Consultation,2026-10-01 11:58:00,General Medicine,DOC001,Discharged
+CASE095,Pharmacy,2026-10-01 12:26:00,Orthopaedics,DOC010,Discharged
+CASE095,Discharge,2026-10-01 12:54:00,General Medicine,DOC009,Discharged
+CASE096,Registration,2026-10-01 09:31:00,General Medicine,DOC008,Discharged
+CASE096,Triage,2026-10-01 10:09:00,General Medicine,DOC007,Discharged
+CASE096,Doctor Consultation,2026-10-01 10:50:00,Emergency,DOC003,Discharged
+CASE096,Laboratory Test,2026-10-01 11:15:00,Orthopaedics,DOC002,Discharged
+CASE096,Pharmacy,2026-10-01 11:48:00,General Medicine,DOC009,Discharged
+CASE096,Discharge,2026-10-01 12:15:00,Emergency,DOC009,Discharged
+CASE097,Registration,2026-10-01 10:44:00,Orthopaedics,DOC001,Discharged
+CASE097,Triage,2026-10-01 10:56:00,Orthopaedics,DOC003,Discharged
+CASE097,Doctor Consultation,2026-10-01 11:20:00,Emergency,DOC003,Discharged
+CASE097,Laboratory Test,2026-10-01 11:45:00,Orthopaedics,DOC004,Discharged
+CASE097,X-Ray,2026-10-01 12:12:00,Orthopaedics,DOC005,Discharged
+CASE097,Pharmacy,2026-10-01 12:22:00,General Medicine,DOC004,Discharged
+CASE097,Discharge,2026-10-01 13:07:00,Orthopaedics,DOC005,Discharged
+CASE098,Registration,2026-10-01 17:16:00,Orthopaedics,DOC003,Discharged
+CASE098,Triage,2026-10-01 17:58:00,Orthopaedics,DOC003,Discharged
+CASE098,Doctor Consultation,2026-10-01 18:13:00,Orthopaedics,DOC010,Discharged
+CASE098,Laboratory Test,2026-10-01 18:56:00,General Medicine,DOC010,Discharged
+CASE098,Pharmacy,2026-10-01 19:03:00,Emergency,DOC002,Discharged
+CASE098,Discharge,2026-10-01 19:10:00,Orthopaedics,DOC010,Discharged
+CASE099,Registration,2026-10-01 18:16:00,Orthopaedics,DOC001,Discharged
+CASE099,Triage,2026-10-01 18:52:00,Orthopaedics,DOC009,Discharged
+CASE099,Doctor Consultation,2026-10-01 19:15:00,Orthopaedics,DOC005,Discharged
+CASE099,Laboratory Test,2026-10-01 19:50:00,Emergency,DOC007,Discharged
+CASE099,X-Ray,2026-10-01 20:14:00,General Medicine,DOC002,Discharged
+CASE099,Pharmacy,2026-10-01 20:22:00,Emergency,DOC008,Discharged
+CASE099,Discharge,2026-10-01 20:53:00,General Medicine,DOC008,Discharged
+CASE100,Registration,2026-10-01 13:45:00,Orthopaedics,DOC006,Discharged
+CASE100,Triage,2026-10-01 14:15:00,Emergency,DOC006,Discharged
+CASE100,Triage,2026-10-01 14:52:00,Orthopaedics,DOC002,Discharged
+CASE100,Doctor Consultation,2026-10-01 15:17:00,Emergency,DOC008,Discharged
+CASE100,Laboratory Test,2026-10-01 15:29:00,General Medicine,DOC008,Discharged
+CASE100,Pharmacy,2026-10-01 15:49:00,Emergency,DOC002,Discharged
+CASE100,Discharge,2026-10-01 15:57:00,General Medicine,DOC007,Discharged

@@ -94,8 +94,15 @@ output_file = OUTPUT_DIR / "hospital_event_logs.csv"
 df.to_csv(output_file, index=False)
 
 print("CareFlow synthetic dataset created!")
+print("-" * 40)
+
 print("Total event records:", len(df))
 print("Total hospital visits:", df["case_id"].nunique())
+print("Total activities:", df["activity"].nunique())
+print("Missing values:", df.isnull().sum().sum())
+print("Duplicate event records:", df.duplicated().sum())
+
 print("Saved file:", output_file)
+
 print("\nFirst 5 records:")
-print(df.head())s
+print(df.head())
