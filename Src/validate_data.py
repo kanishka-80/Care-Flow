@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import datetime
 from pathlib import Path
 
 # ==========================================
@@ -17,6 +18,11 @@ INPUT_FILE = (
 
 REQUIRED_COLUMNS = ["case_id", "activity", "timestamp"]
 
+REPORT_FILE = (
+    PROJECT_ROOT
+    / "Reports"
+    / "validation_report.txt"
+)
 
 def validate_data():
     print("=" * 50)
@@ -80,12 +86,26 @@ def validate_data():
         current_df.equals(sorted_df)
     )
 
-    # Display results
+        # Display results
     print("\nVALIDATION RESULTS")
     print("-" * 50)
 
+    report_lines = [
+        "CAREFLOW - DATA QUALITY VALIDATION REPORT",
+        "=" * 50,
+        f"Generated at: {datetime.now().astimezone().isoformat(timespec='seconds')}",
+        f"Dataset: {INPUT_FILE.name}",
+        f"Total rows: {len(df)}",
+        f"Total columns: {len(df.columns)}",
+        "",
+        "VALIDATION RESULTS",
+        "-" * 50,
+    ]
+
     for check, result in checks.items():
-        print(f"{check}: {result}")
+        line = f"{check}: {result}"
+        print(line)
+        report_lines.append(line)
 
     # Required data-quality rules
     failures = []
@@ -103,21 +123,33 @@ def validate_data():
     if not checks["Rows correctly sorted"]:
         failures.append("Rows correctly sorted")
 
-    print("\n" + "=" * 50)
+    report_lines.append("")
+    report_lines.append("=" * 50)
 
     if failures:
-        print("VALIDATION STATUS: FAILED")
-        print("Issues found:")
+        status = "FAILED"
+        report_lines.append("VALIDATION STATUS: FAILED")
+        report_lines.append("Issues found:")
 
         for failure in failures:
-            print(f"- {failure}")
+            report_lines.append(f"- {failure}")
+    else:
+        status = "PASSED"
+        report_lines.append("VALIDATION STATUS: PASSED")
+        report_lines.append("All configured data-quality checks passed.")
 
-        return False
+    print("\n" + "\n".join(report_lines[-(len(failures) + 3):]))
 
-    print("VALIDATION STATUS: PASSED")
-    print("All configured data-quality checks passed.")
+    # Save validation report
+    REPORT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    REPORT_FILE.write_text(
+        "\n".join(report_lines) + "\n",
+        encoding="utf-8"
+    )
 
-    return True
+    print(f"\nValidation report saved: {REPORT_FILE}")
+
+    return status == "PASSED"
 
 
 if __name__ == "__main__":

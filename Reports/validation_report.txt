@@ -1,0 +1,21 @@
+CAREFLOW - DATA QUALITY VALIDATION REPORT
+==================================================
+Generated at: 2026-10-19T19:56:24+05:30
+Dataset: cleaned_event_logs.csv
+Total rows: 15189
+Total columns: 32
+
+VALIDATION RESULTS
+--------------------------------------------------
+Missing case IDs: 0
+Missing activities: 0
+Invalid timestamps: 0
+Exact duplicate rows: 0
+Unique cases: 1049
+Unique activities: 16
+Activity labels with extra spaces: 0
+Rows correctly sorted: True
+
+==================================================
+VALIDATION STATUS: PASSED
+All configured data-quality checks passed.
