@@ -88,3 +88,10 @@ LacticAcid                   13737
 6. Activity percentage analysis
 7. Case duration analysis
 8. Cases ranked by event count
+
+## Automated Validation
+
+- Validation script: `Src/validate_data.py`
+- Validation report: `Reports/validation_report.txt`
+- Latest validation status: PASSED
+- Checks include missing IDs, missing activities, invalid timestamps, duplicate rows, unique cases, unique activities, activity whitespace, and chronological sorting.
