@@ -95,3 +95,22 @@ LacticAcid                   13737
 - Validation report: `Reports/validation_report.txt`
 - Latest validation status: PASSED
 - Checks include missing IDs, missing activities, invalid timestamps, duplicate rows, unique cases, unique activities, activity whitespace, and chronological sorting.
+
+## Source-to-Target Field Mapping
+
+| Source field | Target field | Transformation |
+|---|---|---|
+| `case:concept:name` | `case_id` | Renamed; missing IDs excluded |
+| `concept:name` | `activity` | Renamed; whitespace trimmed |
+| `time:timestamp` | `timestamp` | Renamed; parsed as UTC-aware datetime |
+| `lifecycle:transition` | `lifecycle:transition` | Preserved without renaming |
+| Other medical attributes | Same field names | Preserved; missing values retained |
+
+The cleaning pipeline removes exact duplicate rows, excludes events missing essential fields, and sorts valid events by case ID and timestamp. Legitimate repeated activities are preserved.
+
+**Output:** `data/processed/cleaned_event_logs.csv`  
+**Cleaned rows:** 15,189  
+**Unique cases:** 1,049  
+**Unique activities:** 16  
+**Validation:** Passed using `Src/validate_data.py`
+
