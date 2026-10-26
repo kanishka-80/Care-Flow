@@ -123,3 +123,34 @@ HAVING COUNT(*) > 1;
 SELECT COUNT(*) AS activity_labels_with_extra_spaces
 FROM cleaned_event_logs
 WHERE activity <> TRIM(activity);
+
+-- 11. Consecutive activity sequence and time gaps
+WITH ordered_events AS (
+    SELECT
+        case_id,
+        activity,
+        timestamp,
+        LEAD(activity) OVER (
+            PARTITION BY case_id
+            ORDER BY timestamp
+        ) AS next_activity,
+        LEAD(timestamp) OVER (
+            PARTITION BY case_id
+            ORDER BY timestamp
+        ) AS next_timestamp
+    FROM cleaned_event_logs
+)
+SELECT
+    case_id,
+    activity AS current_activity,
+    next_activity,
+    timestamp AS current_timestamp,
+    next_timestamp,
+    TIMESTAMPDIFF(
+        MINUTE,
+        timestamp,
+        next_timestamp
+    ) AS gap_minutes
+FROM ordered_events
+WHERE next_activity IS NOT NULL
+ORDER BY case_id, timestamp;
