@@ -114,3 +114,10 @@ The cleaning pipeline removes exact duplicate rows, excludes events missing esse
 **Unique activities:** 16  
 **Validation:** Passed using `Src/validate_data.py`
 
+### Large Event Time-Gap Analysis
+
+A SQL query using `LEAD()` and `TIMESTAMPDIFF()` was executed successfully in MySQL 8.0.46 to identify consecutive events separated by more than 24 hours.
+
+The results showed large gaps between some consecutive activities, including `Release A` and `Return ER`. The largest visible gap was 600,855 minutes (approximately 417 days).
+
+These gaps are flagged for further investigation and are not automatically classified as data errors because the dataset uses anonymized timestamps.

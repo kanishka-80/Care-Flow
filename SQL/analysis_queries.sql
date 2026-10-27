@@ -154,3 +154,27 @@ SELECT
 FROM ordered_events
 WHERE next_activity IS NOT NULL
 ORDER BY case_id, timestamp;
+
+SELECT
+    case_id,
+    activity,
+    next_activity,
+    gap_minutes
+FROM (
+    SELECT
+        case_id,
+        activity,
+        LEAD(activity) OVER (
+            PARTITION BY case_id ORDER BY `timestamp`
+        ) AS next_activity,
+        TIMESTAMPDIFF(
+            MINUTE,
+            `timestamp`,
+            LEAD(`timestamp`) OVER (
+                PARTITION BY case_id ORDER BY `timestamp`
+            )
+        ) AS gap_minutes
+    FROM cleaned_event_logs
+) AS gaps
+WHERE gap_minutes > 1440
+ORDER BY gap_minutes DESC;
