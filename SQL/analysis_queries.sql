@@ -195,3 +195,25 @@ FROM (
     FROM cleaned_event_logs
 ) AS gaps
 WHERE gap_minutes > 1440;
+
+SELECT
+    case_id,
+    COUNT(*) AS large_gap_count,
+    ROUND(MAX(gap_minutes) / 60, 2) AS max_gap_hours
+FROM (
+    SELECT
+        case_id,
+        TIMESTAMPDIFF(
+            MINUTE,
+            `timestamp`,
+            LEAD(`timestamp`) OVER (
+                PARTITION BY case_id
+                ORDER BY `timestamp`
+            )
+        ) AS gap_minutes
+    FROM cleaned_event_logs
+) AS gaps
+WHERE gap_minutes > 1440
+GROUP BY case_id
+ORDER BY large_gap_count DESC
+LIMIT 20;

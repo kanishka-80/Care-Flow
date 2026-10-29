@@ -128,3 +128,10 @@ These gaps are flagged for further investigation and are not automatically class
 A SQL analysis identified 2,122 consecutive-event gaps exceeding 24 hours. The average gap among these records was 322.98 hours, and the maximum was 100,014.25 hours.
 
 These results require careful interpretation because the dataset uses anonymized timestamps. Large gaps are flagged for investigation and are not automatically classified as data-quality errors.
+
+
+### Case-Level Large Gap Analysis
+
+A SQL query was used to identify cases with consecutive-event gaps exceeding 24 hours. The top 20 cases were ranked by the number of large gaps.
+
+Case NGA had 24 large gaps, with a maximum gap of 170 hours. These results are flagged for investigation and are not automatically classified as data-quality errors because the dataset uses anonymized timestamps.
