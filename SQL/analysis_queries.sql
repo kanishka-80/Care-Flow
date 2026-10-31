@@ -217,3 +217,24 @@ WHERE gap_minutes > 1440
 GROUP BY case_id
 ORDER BY large_gap_count DESC
 LIMIT 20;
+
+-- 15. Activity Transition Frequency
+
+WITH activity_transitions AS (
+    SELECT
+        activity AS current_activity,
+        LEAD(activity) OVER (
+            PARTITION BY case_id
+            ORDER BY timestamp
+        ) AS next_activity
+    FROM cleaned_event_logs
+)
+
+SELECT
+    current_activity,
+    next_activity,
+    COUNT(*) AS transition_count
+FROM activity_transitions
+WHERE next_activity IS NOT NULL
+GROUP BY current_activity, next_activity
+ORDER BY transition_count DESC;

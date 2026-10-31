@@ -135,3 +135,33 @@ These results require careful interpretation because the dataset uses anonymized
 A SQL query was used to identify cases with consecutive-event gaps exceeding 24 hours. The top 20 cases were ranked by the number of large gaps.
 
 Case NGA had 24 large gaps, with a maximum gap of 170 hours. These results are flagged for investigation and are not automatically classified as data-quality errors because the dataset uses anonymized timestamps.
+
+
+## Activity Transition Analysis
+
+### Objective
+
+The objective of this analysis is to identify frequently occurring consecutive activity patterns in the hospital event log.
+
+### Methodology
+
+SQL window functions were used to identify the next activity within each patient case.
+
+* `LEAD()` was used to retrieve the next activity.
+* `PARTITION BY case_id` ensured that activities were analysed separately for each case.
+* `ORDER BY timestamp` maintained chronological event order.
+* `GROUP BY` was used to calculate transition frequencies.
+
+### Observed Results
+
+| Current Activity | Next Activity    | Transition Count |
+| ---------------- | ---------------- | ---------------: |
+| Leucocytes       | CRP              |             1774 |
+| CRP              | Leucocytes       |             1443 |
+| ER Registration  | ER Triage        |              970 |
+| ER Triage        | ER Sepsis Triage |              904 |
+| CRP              | LacticAcid       |              627 |
+
+### Conclusion
+
+The analysis identified frequently occurring activity transitions in the hospital event log. These patterns help us understand the sequence of recorded hospital activities and support further process analysis.
