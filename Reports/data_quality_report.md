@@ -165,3 +165,34 @@ SQL window functions were used to identify the next activity within each patient
 ### Conclusion
 
 The analysis identified frequently occurring activity transitions in the hospital event log. These patterns help us understand the sequence of recorded hospital activities and support further process analysis.
+
+
+## Activity Transition Percentage Analysis
+
+### Objective
+
+The objective of this analysis is to calculate the percentage contribution of each consecutive activity transition in the hospital event log.
+
+### Methodology
+
+SQL Common Table Expressions (CTEs) and window functions were used to calculate activity transition frequencies and percentages.
+
+* LEAD() identifies the next activity within each case.
+* PARTITION BY case_id separates individual patient cases.
+* GROUP BY calculates transition frequencies.
+* SUM() OVER() calculates the total number of transitions.
+* ROUND() formats percentages to two decimal places.
+
+### Key Findings
+
+| Activity Transition          | Count | Percentage |
+| ---------------------------- | ----: | ---------: |
+| Leucocytes → CRP             |  1774 |     12.55% |
+| CRP → Leucocytes             |  1443 |     10.21% |
+| ER Registration → ER Triage  |   970 |      6.86% |
+| ER Triage → ER Sepsis Triage |   904 |      6.39% |
+| CRP → LacticAcid             |   627 |      4.43% |
+
+### Conclusion
+
+The analysis identified frequently occurring activity transitions and calculated their percentage contribution to all consecutive transitions. These findings provide insights into common activity sequences in the hospital event log.

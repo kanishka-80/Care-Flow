@@ -238,3 +238,45 @@ FROM activity_transitions
 WHERE next_activity IS NOT NULL
 GROUP BY current_activity, next_activity
 ORDER BY transition_count DESC;
+
+-- 16. Activity Transition Percentage Analysis
+
+WITH activity_transitions AS (
+    SELECT
+        activity AS current_activity,
+
+        LEAD(activity) OVER (
+            PARTITION BY case_id
+            ORDER BY timestamp
+        ) AS next_activity
+
+    FROM cleaned_event_logs
+),
+
+transition_counts AS (
+    SELECT
+        current_activity,
+        next_activity,
+        COUNT(*) AS transition_count
+
+    FROM activity_transitions
+
+    WHERE next_activity IS NOT NULL
+
+    GROUP BY current_activity, next_activity
+)
+
+SELECT
+    current_activity,
+    next_activity,
+    transition_count,
+
+    ROUND(
+        transition_count * 100.0 /
+        SUM(transition_count) OVER (),
+        2
+    ) AS transition_percentage
+
+FROM transition_counts
+
+ORDER BY transition_count DESC;
