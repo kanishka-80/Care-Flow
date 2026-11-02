@@ -280,3 +280,91 @@ SELECT
 FROM transition_counts
 
 ORDER BY transition_count DESC;
+
+-- 17. Patient Case Duration Summary
+
+WITH case_durations AS (
+    SELECT
+        case_id,
+
+        MIN(timestamp) AS first_event_time,
+
+        MAX(timestamp) AS last_event_time,
+
+        TIMESTAMPDIFF(
+            MINUTE,
+            MIN(timestamp),
+            MAX(timestamp)
+        ) AS duration_minutes
+
+    FROM cleaned_event_logs
+
+    GROUP BY case_id
+)
+
+SELECT
+    COUNT(*) AS total_cases,
+
+    ROUND(AVG(duration_minutes) / 60, 2)
+        AS average_duration_hours,
+
+    ROUND(MIN(duration_minutes) / 60, 2)
+        AS minimum_duration_hours,
+
+    ROUND(MAX(duration_minutes) / 60, 2)
+        AS maximum_duration_hours
+
+FROM case_durations;
+
+-- 18. Top 10 Longest Recorded Case Durations
+
+SELECT
+    case_id,
+
+    MIN(timestamp) AS first_event_time,
+
+    MAX(timestamp) AS last_event_time,
+
+    ROUND(
+        TIMESTAMPDIFF(
+            MINUTE,
+            MIN(timestamp),
+            MAX(timestamp)
+        ) / 60,
+        2
+    ) AS duration_hours,
+
+    ROUND(
+        TIMESTAMPDIFF(
+            MINUTE,
+            MIN(timestamp),
+            MAX(timestamp)
+        ) / 1440,
+        2
+    ) AS duration_days
+
+FROM cleaned_event_logs
+
+GROUP BY case_id
+
+ORDER BY duration_hours DESC
+
+LIMIT 10;
+
+-- 19. Detailed Investigation of Longest Duration Case
+
+SELECT
+    case_id,
+    activity,
+    timestamp,
+
+    ROW_NUMBER() OVER (
+        PARTITION BY case_id
+        ORDER BY timestamp
+    ) AS event_sequence
+
+FROM cleaned_event_logs
+
+WHERE case_id = 'HG'
+
+ORDER BY timestamp;
