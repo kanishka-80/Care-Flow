@@ -368,3 +368,62 @@ FROM cleaned_event_logs
 WHERE case_id = 'HG'
 
 ORDER BY timestamp;
+
+-- 20. Event Time Gap Investigation for Case HG
+
+WITH ordered_events AS (
+
+    SELECT
+        case_id,
+        activity,
+        timestamp,
+
+        LEAD(activity) OVER (
+            PARTITION BY case_id
+            ORDER BY timestamp
+        ) AS next_activity,
+
+        LEAD(timestamp) OVER (
+            PARTITION BY case_id
+            ORDER BY timestamp
+        ) AS next_timestamp
+
+    FROM cleaned_event_logs
+
+    WHERE case_id = 'HG'
+)
+
+SELECT
+    case_id,
+
+    activity AS current_activity,
+
+    next_activity,
+
+    timestamp AS current_event_time,
+
+    next_timestamp,
+
+    ROUND(
+        TIMESTAMPDIFF(
+            MINUTE,
+            timestamp,
+            next_timestamp
+        ) / 60,
+        2
+    ) AS gap_hours,
+
+    ROUND(
+        TIMESTAMPDIFF(
+            MINUTE,
+            timestamp,
+            next_timestamp
+        ) / 1440,
+        2
+    ) AS gap_days
+
+FROM ordered_events
+
+WHERE next_timestamp IS NOT NULL
+
+ORDER BY timestamp;

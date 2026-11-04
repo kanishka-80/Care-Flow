@@ -196,3 +196,32 @@ SQL Common Table Expressions (CTEs) and window functions were used to calculate 
 ### Conclusion
 
 The analysis identified frequently occurring activity transitions and calculated their percentage contribution to all consecutive transitions. These findings provide insights into common activity sequences in the hospital event log.
+
+
+
+## Case HG Time-Gap Investigation
+
+### Objective
+
+To investigate the unusually long recorded duration of Case HG by calculating the time differences between consecutive activities.
+
+### Methodology
+
+The SQL LEAD() window function was used to retrieve the next activity and its timestamp within the same case.
+
+TIMESTAMPDIFF() was used to calculate the time difference in hours and days.
+
+### Key Findings
+
+* Case ID: HG
+* Total recorded duration: 422.32 days
+* First recorded event: ER Registration
+* Last recorded event: Return ER
+* Largest consecutive event gap: 417.26 days
+* Gap occurred between Release A and Return ER.
+
+### Conclusion
+
+The investigation identified a significant time gap of 417.26 days between Release A and Return ER. This gap accounts for most of the total recorded case duration.
+
+This finding represents a difference between recorded event timestamps and does not establish continuous hospital admission.
