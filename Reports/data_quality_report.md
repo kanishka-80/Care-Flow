@@ -225,3 +225,36 @@ TIMESTAMPDIFF() was used to calculate the time difference in hours and days.
 The investigation identified a significant time gap of 417.26 days between Release A and Return ER. This gap accounts for most of the total recorded case duration.
 
 This finding represents a difference between recorded event timestamps and does not establish continuous hospital admission.
+
+
+## Top 10 Cases Time-Gap Analysis
+
+### Objective
+To investigate unusually long time intervals between consecutive activities in the top 10 longest-duration cases.
+
+### Methodology
+SQL Common Table Expressions, INNER JOIN, and LEAD() window functions were used to identify consecutive activities and their timestamps.
+
+TIMESTAMPDIFF() was used to calculate time gaps in hours and days.
+
+Only gaps greater than 24 hours were included.
+
+### Key Findings
+
+| Case ID | Activity Transition | Gap (Days) |
+|---|---|---:|
+| HG | Release A → Return ER | 417.26 |
+| VAA | Release A → Return ER | 414.92 |
+| ZS | Release A → Return ER | 397.01 |
+| LS | Release A → Return ER | 394.19 |
+| UBA | Release A → Return ER | 372.01 |
+| AI | Release A → Return ER | 359.53 |
+| HDA | Release A → Return ER | 357.13 |
+| LN | Release A → Return ER | 336.84 |
+| KE | Release A → Return ER | 331.16 |
+| AL | Release A → Return ER | 313.68 |
+
+### Conclusion
+The analysis identified Release A → Return ER as a recurring transition associated with the largest recorded time gaps in the top 10 longest-duration cases.
+
+These gaps explain a substantial portion of the recorded case durations and require careful interpretation because they represent differences between event timestamps, not necessarily continuous hospital admission.

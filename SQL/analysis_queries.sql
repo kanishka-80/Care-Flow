@@ -427,3 +427,90 @@ FROM ordered_events
 WHERE next_timestamp IS NOT NULL
 
 ORDER BY timestamp;
+
+
+-- 21. Large Time Gaps in Top 10 Longest Cases
+
+WITH case_durations AS (
+
+    SELECT
+        case_id,
+
+        TIMESTAMPDIFF(
+            MINUTE,
+            MIN(timestamp),
+            MAX(timestamp)
+        ) AS duration_minutes
+
+    FROM cleaned_event_logs
+    GROUP BY case_id
+),
+
+top_cases AS (
+
+    SELECT case_id
+    FROM case_durations
+    ORDER BY duration_minutes DESC
+    LIMIT 10
+),
+
+ordered_events AS (
+
+    SELECT
+        e.case_id,
+        e.activity,
+        e.timestamp,
+
+        LEAD(e.activity) OVER (
+            PARTITION BY e.case_id
+            ORDER BY e.timestamp
+        ) AS next_activity,
+
+        LEAD(e.timestamp) OVER (
+            PARTITION BY e.case_id
+            ORDER BY e.timestamp
+        ) AS next_timestamp
+
+    FROM cleaned_event_logs e
+
+    INNER JOIN top_cases t
+        ON e.case_id = t.case_id
+)
+
+SELECT
+    case_id,
+    activity AS current_activity,
+    next_activity,
+
+    timestamp AS current_event_time,
+    next_timestamp,
+
+    ROUND(
+        TIMESTAMPDIFF(
+            MINUTE,
+            timestamp,
+            next_timestamp
+        ) / 60,
+        2
+    ) AS gap_hours,
+
+    ROUND(
+        TIMESTAMPDIFF(
+            MINUTE,
+            timestamp,
+            next_timestamp
+        ) / 1440,
+        2
+    ) AS gap_days
+
+FROM ordered_events
+
+WHERE next_timestamp IS NOT NULL
+
+AND TIMESTAMPDIFF(
+    MINUTE,
+    timestamp,
+    next_timestamp
+) > 1440
+
+ORDER BY gap_hours DESC;
