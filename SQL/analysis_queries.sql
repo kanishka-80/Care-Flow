@@ -514,3 +514,97 @@ AND TIMESTAMPDIFF(
 ) > 1440
 
 ORDER BY gap_hours DESC;
+
+-- 22. Largest Time Gap Contribution Analysis
+
+WITH case_durations AS (
+
+    SELECT
+        case_id,
+
+        TIMESTAMPDIFF(
+            MINUTE,
+            MIN(timestamp),
+            MAX(timestamp)
+        ) AS total_duration_minutes
+
+    FROM cleaned_event_logs
+    GROUP BY case_id
+),
+
+top_cases AS (
+
+    SELECT case_id
+    FROM case_durations
+    ORDER BY total_duration_minutes DESC
+    LIMIT 10
+),
+
+ordered_events AS (
+
+    SELECT
+        e.case_id,
+        e.activity,
+        e.timestamp,
+
+        LEAD(e.activity) OVER (
+            PARTITION BY e.case_id
+            ORDER BY e.timestamp
+        ) AS next_activity,
+
+        LEAD(e.timestamp) OVER (
+            PARTITION BY e.case_id
+            ORDER BY e.timestamp
+        ) AS next_timestamp
+
+    FROM cleaned_event_logs e
+
+    INNER JOIN top_cases t
+        ON e.case_id = t.case_id
+),
+
+largest_gaps AS (
+
+    SELECT
+        case_id,
+
+        MAX(
+            TIMESTAMPDIFF(
+                MINUTE,
+                timestamp,
+                next_timestamp
+            )
+        ) AS largest_gap_minutes
+
+    FROM ordered_events
+
+    WHERE next_timestamp IS NOT NULL
+
+    GROUP BY case_id
+)
+
+SELECT
+    d.case_id,
+
+    ROUND(
+        d.total_duration_minutes / 1440,
+        2
+    ) AS total_duration_days,
+
+    ROUND(
+        g.largest_gap_minutes / 1440,
+        2
+    ) AS largest_gap_days,
+
+    ROUND(
+        g.largest_gap_minutes * 100.0 /
+        NULLIF(d.total_duration_minutes, 0),
+        2
+    ) AS gap_contribution_percentage
+
+FROM case_durations d
+
+INNER JOIN largest_gaps g
+    ON d.case_id = g.case_id
+
+ORDER BY gap_contribution_percentage DESC;

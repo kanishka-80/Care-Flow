@@ -258,3 +258,38 @@ Only gaps greater than 24 hours were included.
 The analysis identified Release A → Return ER as a recurring transition associated with the largest recorded time gaps in the top 10 longest-duration cases.
 
 These gaps explain a substantial portion of the recorded case durations and require careful interpretation because they represent differences between event timestamps, not necessarily continuous hospital admission.
+
+
+## Largest Time Gap Contribution Analysis
+
+### Objective
+To measure how much the largest consecutive event gap contributes to the total recorded duration of the top 10 longest-duration cases.
+
+### Methodology
+SQL Common Table Expressions (CTEs), window functions, and aggregate functions were used.
+
+- Case durations were calculated using MIN() and MAX() timestamps.
+- The top 10 longest-duration cases were selected.
+- LEAD() identified consecutive event timestamps.
+- MAX() calculated the largest consecutive event gap for each case.
+- The contribution percentage was calculated by dividing the largest gap by the total recorded case duration.
+
+### Key Findings
+
+| Case ID | Total Duration (Days) | Largest Gap (Days) | Contribution |
+|---|---:|---:|---:|
+| ZS | 398.92 | 397.01 | 99.52% |
+| LS | 396.97 | 394.19 | 99.30% |
+| HG | 422.32 | 417.26 | 98.80% |
+| AI | 364.28 | 359.53 | 98.69% |
+| KE | 336.02 | 331.16 | 98.56% |
+| VAA | 421.82 | 414.92 | 98.36% |
+| LN | 342.61 | 336.84 | 98.32% |
+| AL | 320.54 | 313.68 | 97.86% |
+| HDA | 364.94 | 357.12 | 97.86% |
+| UBA | 386.97 | 372.01 | 96.13% |
+
+### Conclusion
+The analysis found that the largest consecutive event gap accounts for more than 96% of the total recorded duration in each of the top 10 cases.
+
+This indicates that unusually long intervals between recorded events are the major contributors to these cases' recorded durations. These intervals should be interpreted as timestamp gaps and not as evidence of continuous hospital admission.
